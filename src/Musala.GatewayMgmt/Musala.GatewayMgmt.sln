@@ -1,0 +1,108 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musala.GatewayMgmt.Web.Api", "Musala.GatewayMgmt.Web.Api\Musala.GatewayMgmt.Web.Api.csproj", "{CA8717AB-4769-41DB-B819-B76B491305D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Representation", "Representation", "{090D4B29-E0E3-4729-A076-55F17AD33FBA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Abstraction", "Abstraction", "{678C3B6F-9ABB-4ED3-864F-5ABA31554D23}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{8AF4B87C-4DF3-440D-B375-36464FB118D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependency", "Dependency", "{34AC8C1C-D5A8-4B19-90C0-50A4F634CDBC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{C0F23EF1-7E2B-4ACA-BCD6-7EC94A0297CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Access", "Data Access", "{2F578F19-D422-4294-87F7-000E5F3E4848}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musala.GatewayMgmt.Model", "Musala.GatewayMgmt.Model\Musala.GatewayMgmt.Model.csproj", "{7C1EAD4F-E79B-4598-AE83-6DCACC8F7D31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musala.GatewayMgmt.Interfaces.DataAccess", "Musala.GatewayMgmt.Interfaces.DataAccess\Musala.GatewayMgmt.Interfaces.DataAccess.csproj", "{493826AA-8C79-4E3E-B071-24FDBC3B0FB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musala.GatewayMgmt.Services", "Musala.GatewayMgmt.Services\Musala.GatewayMgmt.Services.csproj", "{E2D1D8FD-84EF-45CF-8FA8-EB87B6E5EF6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musala.GatewayMgmt.Repositories.Ef", "Musala.GatewayMgmt.Repositories.Ef\Musala.GatewayMgmt.Repositories.Ef.csproj", "{B00B285C-9B98-4D49-B5F7-BF18090EC6CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "System Interfaces", "System Interfaces", "{3C8EF048-550D-4C9D-A081-9474DE6D1F8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musala.GatewayMgmt.SystemInterfaces.Services", "Musala.GatewayMgmt.SystemInterfaces.Services\Musala.GatewayMgmt.SystemInterfaces.Services.csproj", "{59CEC933-1239-4E00-91BB-1856E1E9E0D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musala.Infrastructure", "Musala.Infrastructure\Musala.Infrastructure.csproj", "{92E0B808-3C68-45F8-84BB-F79C71A698B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musala.GatewayMgmt.Mapper", "Musala.GatewayMgmt.Mapper\Musala.GatewayMgmt.Mapper.csproj", "{83E59648-B2C4-46DB-B2C0-F217D12F116D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "..\..\build\_build.csproj", "{2A4E8A2B-D8A4-48C5-A0CC-13085F845E6D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusalaProjectBuild", "..\..\build\MusalaProjectBuild.csproj", "{7980CF4A-D86A-4AC1-BCE1-6E705576E0F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musala.GatewayMgmt.CoreWeb.Api", "Musala.GatewayMgmt.CoreWeb.Api\Musala.GatewayMgmt.CoreWeb.Api.csproj", "{00187B66-1B4E-4D89-AAD2-BC12043DB66C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA8717AB-4769-41DB-B819-B76B491305D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA8717AB-4769-41DB-B819-B76B491305D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA8717AB-4769-41DB-B819-B76B491305D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA8717AB-4769-41DB-B819-B76B491305D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C1EAD4F-E79B-4598-AE83-6DCACC8F7D31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C1EAD4F-E79B-4598-AE83-6DCACC8F7D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C1EAD4F-E79B-4598-AE83-6DCACC8F7D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C1EAD4F-E79B-4598-AE83-6DCACC8F7D31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{493826AA-8C79-4E3E-B071-24FDBC3B0FB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{493826AA-8C79-4E3E-B071-24FDBC3B0FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{493826AA-8C79-4E3E-B071-24FDBC3B0FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{493826AA-8C79-4E3E-B071-24FDBC3B0FB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2D1D8FD-84EF-45CF-8FA8-EB87B6E5EF6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2D1D8FD-84EF-45CF-8FA8-EB87B6E5EF6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2D1D8FD-84EF-45CF-8FA8-EB87B6E5EF6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2D1D8FD-84EF-45CF-8FA8-EB87B6E5EF6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B00B285C-9B98-4D49-B5F7-BF18090EC6CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B00B285C-9B98-4D49-B5F7-BF18090EC6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B00B285C-9B98-4D49-B5F7-BF18090EC6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B00B285C-9B98-4D49-B5F7-BF18090EC6CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59CEC933-1239-4E00-91BB-1856E1E9E0D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59CEC933-1239-4E00-91BB-1856E1E9E0D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59CEC933-1239-4E00-91BB-1856E1E9E0D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59CEC933-1239-4E00-91BB-1856E1E9E0D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92E0B808-3C68-45F8-84BB-F79C71A698B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92E0B808-3C68-45F8-84BB-F79C71A698B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92E0B808-3C68-45F8-84BB-F79C71A698B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92E0B808-3C68-45F8-84BB-F79C71A698B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83E59648-B2C4-46DB-B2C0-F217D12F116D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83E59648-B2C4-46DB-B2C0-F217D12F116D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83E59648-B2C4-46DB-B2C0-F217D12F116D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83E59648-B2C4-46DB-B2C0-F217D12F116D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A4E8A2B-D8A4-48C5-A0CC-13085F845E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A4E8A2B-D8A4-48C5-A0CC-13085F845E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7980CF4A-D86A-4AC1-BCE1-6E705576E0F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7980CF4A-D86A-4AC1-BCE1-6E705576E0F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00187B66-1B4E-4D89-AAD2-BC12043DB66C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00187B66-1B4E-4D89-AAD2-BC12043DB66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00187B66-1B4E-4D89-AAD2-BC12043DB66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00187B66-1B4E-4D89-AAD2-BC12043DB66C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CA8717AB-4769-41DB-B819-B76B491305D7} = {090D4B29-E0E3-4729-A076-55F17AD33FBA}
+		{2F578F19-D422-4294-87F7-000E5F3E4848} = {678C3B6F-9ABB-4ED3-864F-5ABA31554D23}
+		{7C1EAD4F-E79B-4598-AE83-6DCACC8F7D31} = {8AF4B87C-4DF3-440D-B375-36464FB118D3}
+		{493826AA-8C79-4E3E-B071-24FDBC3B0FB0} = {2F578F19-D422-4294-87F7-000E5F3E4848}
+		{E2D1D8FD-84EF-45CF-8FA8-EB87B6E5EF6A} = {C0F23EF1-7E2B-4ACA-BCD6-7EC94A0297CD}
+		{B00B285C-9B98-4D49-B5F7-BF18090EC6CC} = {34AC8C1C-D5A8-4B19-90C0-50A4F634CDBC}
+		{3C8EF048-550D-4C9D-A081-9474DE6D1F8B} = {090D4B29-E0E3-4729-A076-55F17AD33FBA}
+		{59CEC933-1239-4E00-91BB-1856E1E9E0D6} = {3C8EF048-550D-4C9D-A081-9474DE6D1F8B}
+		{92E0B808-3C68-45F8-84BB-F79C71A698B1} = {8AF4B87C-4DF3-440D-B375-36464FB118D3}
+		{83E59648-B2C4-46DB-B2C0-F217D12F116D} = {8AF4B87C-4DF3-440D-B375-36464FB118D3}
+		{00187B66-1B4E-4D89-AAD2-BC12043DB66C} = {090D4B29-E0E3-4729-A076-55F17AD33FBA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {154D0C5E-2768-49DE-9EFD-D3BE91A2231E}
+	EndGlobalSection
+EndGlobal
