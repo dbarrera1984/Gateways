@@ -64,7 +64,7 @@ Instructions
 8. Execute the command: Update-Database -Verbose
 9. Run project in VS (verify that Startup Project is: "Musala.GatwayMgmt.Presentation.Web.Api")
 10. (Optional) Publish solution in VS2017: Right-click in Musala.GatewayMgmt.Presentation.Web.Api project => "Publish ..."
-11. (Optional) Create a Website by using IIS, select the folder (previously selected in 2.4.1)
+11. (Optional) Create a Website by using IIS, select the folder (previously selected in "Publish settings")
 12. (Optional) Test in web browser: For example: http://localhost/api/gateways
 13. Test api in Web browser (use links in the response for web api navigation:
 - http://localhost/api/gateways
