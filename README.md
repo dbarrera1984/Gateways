@@ -59,5 +59,5 @@ Instructions
 11. (Optional) Create a Website by using IIS, select the folder (previously selected in 2.4.1)
 12. (Optional) Test in web browser: For example: http://localhost/api/gateways
 13. Test api in Web browser (use links in the response for web api navigation:
-> http://localhost/api/gateways
-> http://localhost/api/devices
+- http://localhost/api/gateways
+- http://localhost/api/devices
