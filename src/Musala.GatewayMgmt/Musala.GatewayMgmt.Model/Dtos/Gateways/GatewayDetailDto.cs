@@ -11,7 +11,7 @@ namespace Musala.GatewayMgmt.Model.Dtos.Gateways
 
         #region Related Data
 
-        List<DeviceDetailDto> Devices { get; set; }
+        public List<DeviceDetailDto> Devices { get; set; }
         
         #endregion
     }

@@ -2,6 +2,8 @@
 using Musala.GatewayMgmt.SystemInterfaces.Services;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 using System.Web.Http;
 using System.Web.Http.Description;
 
@@ -32,9 +34,7 @@ namespace Musala.GatewayMgmt.Web.Api.Controllers
 
             try
             {
-                var items = _service.GetAll()?.Items ?? new List<GatewayDetailDto>();
-
-               output.Items.AddRange(items);
+                output = _service.GetAllWithDeviceInfo();
             }
             catch (Exception e)
             {

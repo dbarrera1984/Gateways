@@ -1,10 +1,15 @@
-﻿using AutoMapper;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using AutoMapper;
 using Musala.GatewayMgmt.Interfaces.DataAccess.Repositories;
 using Musala.GatewayMgmt.Model.Dtos.Gateways;
 using Musala.GatewayMgmt.Model.Entities;
 using Musala.GatewayMgmt.SystemInterfaces.Services;
 using Musala.Infrastructure;
 using System.Net;
+using System.Text;
+using Musala.GatewayMgmt.Model.Dtos.Devices;
 
 namespace Musala.GatewayMgmt.Services
 {
@@ -36,16 +41,64 @@ namespace Musala.GatewayMgmt.Services
                     StatusMessage = "You must provide a valid IPv4. Ex: 192.168.1.1",
                 };
 
-            using (_uowFactory.Create())
+            try
             {
-                _gatewayRepo.Add(entity);
+                using (_uowFactory.Create())
+                {
+                    _gatewayRepo.Add(entity);
+                }
+            }
+            catch (Exception e)
+            {
+                var dtoWithErrors = Mapper.Map<Gateway, GatewayDetailDto>(entity);
+                dtoWithErrors.StatusCode = HttpStatusCode.BadRequest;
+                var msg = new StringBuilder();
+                msg.AppendLine(e.Message);
+                msg.AppendLine(e.InnerException?.Message);
+                msg.AppendLine(e.InnerException?.InnerException?.Message);
+                dtoWithErrors.StatusMessage = $"Error occurred when processing request: {msg}";
+
+                return dtoWithErrors;
             }
 
             var dto = Mapper.Map<Gateway, GatewayDetailDto>(entity);
             dto.StatusCode = HttpStatusCode.Created;
-            dto.StatusMessage = "Gateway created sucessfully.";
+            dto.StatusMessage = "Gateway created successfully.";
 
             return dto;
+        }
+
+        public GetGatewaysOutput GetAllWithDeviceInfo()
+        {
+            var output = new GetGatewaysOutput();
+
+            // Include Gateway Data
+            var gateways = (from g in _gatewayRepo.FindAll(i => i.Devices)
+                select new GatewayDetailDto
+                {
+                    SerialNumber= g.SerialNumber,
+                    Name = g.Name,
+                    Id = g.Id,
+                    IPv4 = g.IPv4,
+                    Devices = (from d in g.Devices
+                        select new DeviceDetailDto
+                        {
+                            DateCreated = d.DateCreated,
+                            GatewayId = d.GatewayId,
+                            GatewayName = d.Gateway.Name,
+                            Id = d.Id,
+                            Status = d.Status,
+                            UID = d.UID,
+                            Vendor = d.Vendor,
+                        }).ToList(),
+                }).ToList();
+
+            output.Items.AddRange(gateways);
+
+            output.StatusCode = HttpStatusCode.OK;
+            output.StatusMessage = "Items retrieved successfully";
+
+            return output;
         }
     }
 }

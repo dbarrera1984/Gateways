@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Net;
 
 namespace Musala.GatewayMgmt.Model.Dtos
 {
-    public class GetItemDtosOutput<T, TK>
+    public class GetItemDtosOutput<T>
     {
         public GetItemDtosOutput()
         {
@@ -10,5 +11,8 @@ namespace Musala.GatewayMgmt.Model.Dtos
         }
 
         public List<T> Items { get; }
+
+        public HttpStatusCode StatusCode { get; set; }
+        public string StatusMessage { get; set; }
     }
 }

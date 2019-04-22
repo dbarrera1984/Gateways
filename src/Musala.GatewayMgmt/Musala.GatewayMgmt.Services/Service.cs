@@ -5,6 +5,7 @@ using Musala.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Net;
 
 namespace Musala.GatewayMgmt.Services
 {
@@ -26,18 +27,25 @@ namespace Musala.GatewayMgmt.Services
         public TDto FindById(K id)
         {
             var entity = _repository.FindById(id);
+            var dto = Mapper.Map<T, TDto>(entity);
 
-            return Mapper.Map<T, TDto>(entity);
+            dto.StatusCode = HttpStatusCode.OK;
+            dto.StatusMessage = "Items retrieved successfully";
+
+            return dto;
+
         }
 
-        public GetItemDtosOutput<TDto, K> GetAll()
+        public GetItemDtosOutput<TDto> GetAll()
         {
-            var output = new GetItemDtosOutput<TDto, K>();
+            var output = new GetItemDtosOutput<TDto>();
 
             var entities = _repository.FindAll();
             var dtos = Mapper.Map<IEnumerable<T>, IEnumerable<TDto>>(entities);
 
             output.Items.AddRange(dtos);
+            output.StatusCode = HttpStatusCode.OK;
+            output.StatusMessage = "Items retrieved successfully";
 
             return output;
         }

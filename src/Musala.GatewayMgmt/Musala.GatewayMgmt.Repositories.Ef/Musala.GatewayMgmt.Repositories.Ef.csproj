@@ -63,6 +63,10 @@
     <Compile Include="Migrations\201904202222447_GatewayClassDateCreatedProperty.Designer.cs">
       <DependentUpon>201904202222447_GatewayClassDateCreatedProperty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904220333573_GatewaySerialNumberIndex.cs" />
+    <Compile Include="Migrations\201904220333573_GatewaySerialNumberIndex.Designer.cs">
+      <DependentUpon>201904220333573_GatewaySerialNumberIndex.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyDropCreateDatabaseIfModelChanges.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904202222447_GatewayClassDateCreatedProperty.resx">
       <DependentUpon>201904202222447_GatewayClassDateCreatedProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904220333573_GatewaySerialNumberIndex.resx">
+      <DependentUpon>201904220333573_GatewaySerialNumberIndex.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

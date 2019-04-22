@@ -6,7 +6,7 @@ namespace Musala.GatewayMgmt.SystemInterfaces.Services
 {
     public interface IService<T, K> where T : ItemDto<K>
     {
-        GetItemDtosOutput<T, K> GetAll();
+        GetItemDtosOutput<T> GetAll();
 
         T FindById(K id);
 
