@@ -7,5 +7,6 @@ namespace Musala.GatewayMgmt.SystemInterfaces.Services
     {
         GatewayDetailDto Add(CreateGatewayInput input);
         GetGatewaysOutput GetAllWithDeviceInfo();
+        GatewayDetailDto FindByIdWithDeviceInfo(int id);
     }
 }

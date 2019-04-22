@@ -50,7 +50,7 @@ namespace Musala.GatewayMgmt.Web.Api.Controllers
 
             try
             {
-                response = _service.FindById(id);
+                response = _service.FindByIdWithGatewayInfo(id);
             }
             catch (Exception e)
             {

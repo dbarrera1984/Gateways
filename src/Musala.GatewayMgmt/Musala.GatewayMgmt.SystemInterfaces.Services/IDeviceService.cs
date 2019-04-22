@@ -8,5 +8,7 @@ namespace Musala.GatewayMgmt.SystemInterfaces.Services
 
         GetDevicesOutput GetAllByGateway(int gatewayId);
         GetDevicesOutput GetAllWithGatewayInfo();
+
+        DeviceDetailDto FindByIdWithGatewayInfo(int id);
     }
 }

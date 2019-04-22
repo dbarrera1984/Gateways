@@ -1,11 +1,7 @@
 ﻿using Musala.GatewayMgmt.Model.Dtos.Gateways;
 using Musala.GatewayMgmt.SystemInterfaces.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Web.Http;
-using System.Web.Http.Description;
 
 namespace Musala.GatewayMgmt.Web.Api.Controllers
 {
@@ -16,7 +12,7 @@ namespace Musala.GatewayMgmt.Web.Api.Controllers
 
         public GatewayController(IGatewayService service)
         {
-            if(service == null)
+            if (service == null)
             {
                 var msgError = "Gateway Service exception";
                 throw new ArgumentNullException(msgError);
@@ -53,7 +49,7 @@ namespace Musala.GatewayMgmt.Web.Api.Controllers
 
             try
             {
-                response = _service.FindById(id);
+                response = _service.FindByIdWithDeviceInfo(id);
             }
             catch (Exception e)
             {

@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using AutoMapper;
+﻿using AutoMapper;
 using Musala.GatewayMgmt.Interfaces.DataAccess.Repositories;
+using Musala.GatewayMgmt.Model.Dtos.Devices;
 using Musala.GatewayMgmt.Model.Dtos.Gateways;
 using Musala.GatewayMgmt.Model.Entities;
 using Musala.GatewayMgmt.SystemInterfaces.Services;
 using Musala.Infrastructure;
+using System;
+using System.Linq;
 using System.Net;
 using System.Text;
-using Musala.GatewayMgmt.Model.Dtos.Devices;
 
 namespace Musala.GatewayMgmt.Services
 {
@@ -72,26 +71,26 @@ namespace Musala.GatewayMgmt.Services
         {
             var output = new GetGatewaysOutput();
 
-            // Include Gateway Data
+            // Include Device Data
             var gateways = (from g in _gatewayRepo.FindAll(i => i.Devices)
-                select new GatewayDetailDto
-                {
-                    SerialNumber= g.SerialNumber,
-                    Name = g.Name,
-                    Id = g.Id,
-                    IPv4 = g.IPv4,
-                    Devices = (from d in g.Devices
-                        select new DeviceDetailDto
-                        {
-                            DateCreated = d.DateCreated,
-                            GatewayId = d.GatewayId,
-                            GatewayName = d.Gateway.Name,
-                            Id = d.Id,
-                            Status = d.Status,
-                            UID = d.UID,
-                            Vendor = d.Vendor,
-                        }).ToList(),
-                }).ToList();
+                            select new GatewayDetailDto
+                            {
+                                SerialNumber = g.SerialNumber,
+                                Name = g.Name,
+                                Id = g.Id,
+                                IPv4 = g.IPv4,
+                                Devices = (from d in g.Devices
+                                           select new DeviceDetailDto
+                                           {
+                                               DateCreated = d.DateCreated,
+                                               GatewayId = d.GatewayId,
+                                               GatewayName = d.Gateway.Name,
+                                               Id = d.Id,
+                                               Status = d.Status,
+                                               UID = d.UID,
+                                               Vendor = d.Vendor,
+                                           }).ToList(),
+                            }).ToList();
 
             output.Items.AddRange(gateways);
 
@@ -99,6 +98,23 @@ namespace Musala.GatewayMgmt.Services
             output.StatusMessage = "Items retrieved successfully";
 
             return output;
+        }
+
+        public GatewayDetailDto FindByIdWithDeviceInfo(int id)
+        {
+            var entity = _gatewayRepo.FindById(id, i => i.Devices);
+
+            if (entity == null)
+                return new GatewayDetailDto
+                {
+                    StatusCode = HttpStatusCode.NotFound,
+                    StatusMessage = "Gateway not found"
+                };
+
+            var dto = Mapper.Map<Gateway, GatewayDetailDto>(entity);
+            dto.StatusCode = HttpStatusCode.OK;
+            dto.StatusMessage = "Gateway retrieved successfully";
+            return dto;
         }
     }
 }

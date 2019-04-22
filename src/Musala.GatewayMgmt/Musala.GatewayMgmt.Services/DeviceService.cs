@@ -94,5 +94,22 @@ namespace Musala.GatewayMgmt.Services
 
             return output;
         }
+
+        public DeviceDetailDto FindByIdWithGatewayInfo(int id)
+        {
+            var entity = _deviceRepo.FindById(id, i => i.Gateway);
+
+            if (entity == null)
+                return new DeviceDetailDto
+                {
+                    StatusCode = HttpStatusCode.NotFound,
+                    StatusMessage = "Device not found"
+                };
+
+            var dto = Mapper.Map<Device, DeviceDetailDto>(entity);
+            dto.StatusCode = HttpStatusCode.OK;
+            dto.StatusMessage = "Device retrieved successfully";
+            return dto;
+        }
     }
 }
