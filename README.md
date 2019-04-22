@@ -21,18 +21,18 @@ Technologies and tools
 
 Project Structure
 ------------------
-ABSTRACTION
-	DATA ACCESS
+- ABSTRACTION
+	- DATA ACCESS
 		- Musala.GatewayMgmt.Interfaces.DataAccess (Repository Contracts)
-BUSINESS
+- BUSINESS
 	- Musala.GatewayMgmt.Services (Business concrete implementation)
-DEPENDENCY
+- DEPENDENCY
 	- Musala.GatewayMgmt.Repositories.Ef (Repositories concrete implementation, EF Mapping, Fluent API,  )
-COMMON
+- COMMON
 	- Musala.GatewayMgmt.Mapper (For Mapper profiles)
 	- Musala.GatewayMgmt.Model (Entities, DTOs)
 	- Musala.Infrastructure (base infraestructure stuff, reusable by others projects)
-PRESENTATION
+- PRESENTATION
 	SYSTEM INTERFACES
 		- Musala.GatewayMgmt.SystemInterfaces.Services (Business Contracts)
 	- Musala.GatewayMgmt.Web.Api
