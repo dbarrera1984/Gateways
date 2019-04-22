@@ -5,7 +5,7 @@ using System.Web.Http;
 
 namespace Musala.GatewayMgmt.Web.Api.Controllers
 {
-    [RoutePrefix("api/devices")]
+    [RoutePrefix("api/v1/devices")]
     public class DeviceController : ApiController
     {
         private IDeviceService _service;

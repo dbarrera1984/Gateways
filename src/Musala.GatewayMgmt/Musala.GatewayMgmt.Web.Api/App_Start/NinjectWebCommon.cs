@@ -73,7 +73,6 @@ namespace Musala.GatewayMgmt.Web.Api.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            //TODO: Remove next line, is unnecesary
             kernel.Bind<IUnitOfWork>().To<EfUnitOfWork>().InRequestScope();
 
             // unit of work per request
@@ -82,9 +81,7 @@ namespace Musala.GatewayMgmt.Web.Api.App_Start
             // AutoMapper
             kernel.Bind<IMapper>().ToMethod(AutoMapper).InSingletonScope();
 
-            // repositories
-
-            // Repositories Ef
+            // Repositories
             kernel.Bind<IGatewayRepository>().To<GatewayRepository>();
             kernel.Bind<IDeviceRepository>().To<DeviceRepository>();
 
@@ -95,7 +92,7 @@ namespace Musala.GatewayMgmt.Web.Api.App_Start
             // Controllers
             kernel.Bind<GatewayController>().ToSelf();
             kernel.Bind<DeviceController>().ToSelf();
-            
+
             // default binding for everything except unit of work
             //kernel.Bind(x => x.FromAssembliesMatching("*").SelectAllClasses().Excluding<UnitOfWork>().BindDefaultInterface());
         }

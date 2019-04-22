@@ -7,7 +7,7 @@ using System.Web.Http.Description;
 
 namespace Musala.GatewayMgmt.Web.Api.Controllers
 {
-    [RoutePrefix("api/gateways")]
+    [RoutePrefix("api/v1/gateways")]
     public class GatewayController : ApiController
     {
         private IGatewayService _service;

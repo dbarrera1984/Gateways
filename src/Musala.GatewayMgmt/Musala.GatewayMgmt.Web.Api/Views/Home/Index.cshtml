@@ -1,24 +1,48 @@
 ﻿<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>GATEWAYS</h1>
+    <p class="lead">
+        This sample project is managing gateways - master devices that control multiple peripheral devices.
+        This is a REST service (JSON/HTTP) for storing information about these gateways and their associated devices.
+        This information must be stored in the database. When storing a gateway, any field marked as "to be validated"
+        must be validated and an error returned if it is invalid. Also, no more that 10 peripheral devices are allowed for a gateway.
+        The service must also offer an operation for displaying information about all stored gateways (and their devices) and
+        an operation for displaying details for a single gateway. Finally, it must be possible to add and remove a device from a gateway.
+    </p>
+    <p><a href="https://github.com/dbarrera1984/Gateways" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-        a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-        is an ideal platform for building RESTful applications on the .NET Framework.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+        <h2>Gateways</h2>
+        <p>
+            <ul>
+                <li>a unique serial number (string)</li>
+                <li>human-readable name (string)</li>
+                <li>IPv4 address (to be validated)</li>
+                <li>multiple associated peripheral devices</li>
+            </ul>
+        </p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
+        <h2>Devices</h2>
+        <p>
+            <ul>
+                <li>a UID (number)</li>
+                <li>vendor (string)</li>
+                <li>date created</li>
+                <li>status - online/offline</li>
+            </ul>
+        </p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
+        <h2>Other considerations</h2>
+        <p>
+            <ul>
+                <li>No User Interface is necessary for the solution</li>
+                <li>
+                    Provide an automated build
+                </li>
+                <li>Provide basic unit tests (if you have time)</li>
+            </ul>
+        </p>
     </div>
 </div>
