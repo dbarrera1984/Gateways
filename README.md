@@ -70,4 +70,7 @@ Instructions
 12. (Optional) Test API in web browser: For example: http://localhost/
 13. Test api in Web browser (by using Swagger):
 > http://localhost/
+
 > http://localhost/swagger/
+14. SQL Script with demo data is in:
+> https://github.com/dbarrera1984/Gateways/blob/master/db/INSERT_DEMO_DATA.sql
