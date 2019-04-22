@@ -21,9 +21,8 @@ Technologies and tools
 
 Project Structure
 ------------------
-- ABSTRACTION
-	- DATA ACCESS
-		- Musala.GatewayMgmt.Interfaces.DataAccess (Repository Contracts)
+- ABSTRACTION > DATA ACCESS
+	- Musala.GatewayMgmt.Interfaces.DataAccess (Repository Contracts)
 - BUSINESS
 	- Musala.GatewayMgmt.Services (Business concrete implementation)
 - DEPENDENCY
@@ -32,9 +31,8 @@ Project Structure
 	- Musala.GatewayMgmt.Mapper (For Mapper profiles)
 	- Musala.GatewayMgmt.Model (Entities, DTOs)
 	- Musala.Infrastructure (base infraestructure stuff, reusable by others projects)
-- PRESENTATION
-	SYSTEM INTERFACES
-		- Musala.GatewayMgmt.SystemInterfaces.Services (Business Contracts)
+- PRESENTATION > SYSTEM INTERFACES
+	- Musala.GatewayMgmt.SystemInterfaces.Services (Business Contracts)
 	- Musala.GatewayMgmt.Web.Api
 
 Prerequisites
@@ -56,10 +54,9 @@ Instructions
 6. Open "Nuget Package Console"
 7. Select "Default Project": Musala.GatewayMgmt.Repositories.Ef
 8. Execute the command: Update-Database -Verbose
-9. Run project (verify that Startup Project is: "Musala.GatwayMgmt.Presentation.Web.Api")
+9. Run project in VS (verify that Startup Project is: "Musala.GatwayMgmt.Presentation.Web.Api")
 10. (Optional) Publish solution in VS2017: Right-click in Musala.GatewayMgmt.Presentation.Web.Api project => "Publish ..."
 11. (Optional) Create a Website by using IIS, select the folder (previously selected in 2.4.1)
 12. (Optional) Test in web browser: For example: http://localhost/api/gateways
-
-
-
+13. Test api in Web browser:
+- 
